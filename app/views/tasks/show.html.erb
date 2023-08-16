@@ -1,0 +1,8 @@
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<p class="details"><%= @task.completed ? "You've done this already!" : "You should do this at one point.." %></p>
+<p class="nav_button"><%= link_to "Back to task list", tasks_path %></p>
+<p class="nav_button"><%= link_to "Edit this task", edit_path %></p>
+<p class="button"><%= link_to "Delete", task_path,
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%></p>
